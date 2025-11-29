@@ -1,0 +1,17 @@
+{
+  "name": "webpack-merge",
+  "version": "1.0.0",
+  "description": "tutorial on productions and development differences",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "author": "Tuan Ha <hatuan@email.cz>",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.101.3",
+    "webpack-merge": "^6.0.1"
+  }
+}

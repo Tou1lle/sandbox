@@ -1,0 +1,22 @@
+PLAN
+Get computer choice
+Get player choice
+Decide winner
+ 
+
+
+PSEUDOCODE FOR COMPUTER CHOICE 
+ Create constants for Rock, Paper, Scissors
+ Generate random number
+  IF number equals 0
+    return rock
+  ELSE IF number equals 1
+    return paper
+  ELSE IF number equals 2
+    return scissors
+  ELSE
+    return error
+
+PSEUDOCODE FOR HUMAN CHOICE
+  Prompt the user for choice and store it in variable
+  Return the variable

@@ -1,0 +1,14 @@
+{
+  "name": "sandbox_form_custom_validation_practice",
+  "version": "1.0.0",
+  "description": "Just a practice of custom validation for forms",
+  "keywords": [
+    "NIGGA"
+  ],
+  "license": "ISC",
+  "author": "Tuan Ha <hatuan@email.cz>",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

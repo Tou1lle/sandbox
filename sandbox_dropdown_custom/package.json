@@ -1,0 +1,11 @@
+{
+  "name": "dropdown-menu-touille",
+  "version": "1.0.0",
+  "description": "Functions focused on creating the behaviour of a dropdown menu",
+  "main": "dropdown-menu-touille.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tuan Ha <hatuan@email.cz>",
+  "license": "ISC"
+}

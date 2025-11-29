@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Customizable select</title>
+</head>
+<body>
+  <form action="">
+    <p>
+      <label for="pet-select">Select pet:</label>
+      <select id="pet-select">
+        <button>
+          <selectedcontent></selectedcontent>
+        </button>
+
+        <option value="">Please select a pet</option>
+        <option value="cat">
+          <span class="icon" aria-hidden="true">&#128049</span><span class="option-label">Cat</span>
+        </option>
+        <option value="dog">
+          <span class="icon" aria-hidden="true">&#128054</span><span class="option-label">Dog</span>
+        </option>
+        <option value="panda">
+          <span class="icon" aria-hidden="true">&#128060</span><span class="option-label">Panda</span>
+        </option>
+        <option value="frog">
+          <span class="icon" aria-hidden="true">&#128056</span><span class="option-label">Frog</span>
+        </option>
+        <option value="monkey">
+          <span class="icon" aria-hidden="true">&#128054</span><span class="option-label">Monkey</span>
+        </option>
+        <option value="rabbit">
+          <span class="icon" aria-hidden="true">&#128048</span><span class="option-label">Rabbit</span>
+        </option>
+      </select>
+    </p>
+  </form>
+</body>
+</html>

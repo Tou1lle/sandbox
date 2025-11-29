@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <title>Enabled and Enabled Form Controls</title>
+</head>
+
+<body>
+  <form action="">
+    <fieldset id="shipping">
+      <legend>Shipping address</legend>
+      <div>
+        <label for="name1">Name: </label>
+        <input type="text" id="name1" name="name1" required>
+      </div>
+      <div>
+        <label for="address1">Address: </label>
+        <input type="text" id="address1" name="address1" required>
+      </div>
+      <div>
+        <label for="zip-code1">Zip/postal code:</label>
+        <input type="text" id="zip-code1" name="zip-code1" required>
+      </div>
+    </fieldset>
+    <fieldset id="billing">
+      <legend>Billing address</legend>
+      <div>
+        <label for="billing-checkbox">Same as shipping address:</label>
+        <input type="checkbox" id="billing-checkbox" checked>
+      </div>
+      <div>
+        <label for="name" class="billing-label disabled-label">Name: </label>
+        <input type="text" id="name" name="name" disabled required>
+      </div>
+      <div>
+        <label for="address2" class="billing-label disabled-label">
+          Address:
+        </label>
+        <input id="address2" name="address2" type="text" disabled required />
+      </div>
+      <div>
+        <label for="zip-code2" class="billing-label disabled-label">
+          Zip/postal code:
+        </label>
+        <input id="zip-code2" name="zip-code2" type="text" disabled required />
+      </div>
+    </fieldset>
+
+    <div><button>Submit</button></div>
+  </form>
+</body>
+
+</html>

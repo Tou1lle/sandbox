@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "dropdown-menu-touille": "file:../sandbox_dropdown_custom"
+  }
+}

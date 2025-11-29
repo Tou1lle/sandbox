@@ -1,0 +1,97 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+fieldset {
+  padding: 1.5em;
+}
+
+fieldset p:first-of-type {
+  margin: 0 0 1em 0; 
+}
+
+fieldset div {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 1.5em;
+}
+
+fieldset div:last-child {
+  margin-bottom: 0px;
+}
+
+input,
+label,
+button {
+  font-family: inherit;
+  font-size: 100%;
+  height: 2rem;
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 10px;
+  height: 2em;  
+  padding-left: 1em;
+  box-shadow: inset 1px 1px 1px #222;
+}
+
+input + span {
+  position: relative;
+}
+
+input:required + span::after {
+  font-size: 0.7rem;
+  position: absolute;
+  content: "Required";
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  top: -26px;
+  left: -70px;
+}
+
+input:out-of-range + span::after {
+  color: white;
+  background-color: red;
+  width: 165px;
+  content: "Outside of allowable value range";
+  left: -182px;
+}
+
+input + span::before {
+  position: absolute;
+  right: -20px;
+  top: 5px;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+input:invalid + span::before {
+  content: "\2718";
+  color: red;
+}
+
+input:valid + span::before {
+  content: "\2714";
+  color: green;
+}
+
+button {
+  width: 8em;
+  margin: 1em auto;
+}

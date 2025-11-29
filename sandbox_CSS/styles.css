@@ -1,0 +1,10 @@
+body {
+  display: flex;
+  border-collapse: collapse;
+}
+
+div {
+  padding: 20px;
+  background-color: aqua;
+  border: 20px solid;
+}

@@ -1,0 +1,13 @@
+.parent {
+  height: 200px;
+  background-color: aqua;
+}
+
+div > div {
+  height: 100px;
+  background-color: yellow;
+}
+
+.child {
+  background-color: pink;
+}

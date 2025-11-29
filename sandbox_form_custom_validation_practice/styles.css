@@ -1,0 +1,132 @@
+:root {
+  --nice-font: Arial, Helvetica, sans-serif;
+  --default-input-color: #000000; 
+  --focus-input-color: #4682B4;
+  --red-input-color: #FF3C1C;
+  --green-input-color: #00c91b;
+  --white-text: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--nice-font);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container {
+  width: 500px;
+  padding: 0px 50px;
+}
+
+.form-control {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  align-items: center;
+  position: relative;
+}
+
+input {
+  height: 2rem;
+  border: 2px solid var(--default-input-color);
+  border-radius: 5px;
+}
+
+input:valid {
+  border: 2px solid var(--green-input-color);
+}
+
+input:invalid,
+input.invalid-from-js {
+  border: 2px solid var(--red-input-color);
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid var(--focus-input-color);
+}
+
+span,
+.error-message {
+  position: absolute;
+}
+
+span {
+  right: -100px;
+}
+
+input:invalid:required + span::before{
+  content: "REQUIRED";
+  color: var(--red-input-color);
+}
+
+.email-container .error-message {
+  right: -366px;
+  color: var(--red-input-color);
+}
+
+.postalcode-container .error-message {
+  right: -275px;
+  color: var(--red-input-color);
+}
+
+.password-container .error-message {
+  top: 0;
+  left: -220px;
+  border: 2px solid var(--focus-input-color);
+  padding: 5px 30px;
+  border-radius: 5px;
+}
+
+.password-container .error-message p {
+  margin: 0;
+  padding: 5px 0px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-container .error-message p.good::before,
+.password-container .error-message p.bad::before {
+  left: -20px;
+  position: absolute;
+}
+
+.password-container .error-message p.good::before {
+  content: "✓";
+  color: var(--green-input-color);
+}
+
+.password-container .error-message p.bad::before {
+  content: "x";
+  color: var(--red-input-color);
+}
+
+.password-confirm-container .error-message {
+  bottom: -20px;
+  color: var(--red-input-color);
+}
+
+button {
+  display: block;
+  margin: auto;
+  margin-top: 3rem;
+  background-color: var(--focus-input-color);
+  color: var(--white-text);
+  font-size: 2rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid var(--white-text);
+  outline: 3px solid var(--default-input-color);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--white-text);
+  color: var(--focus-input-color);
+}

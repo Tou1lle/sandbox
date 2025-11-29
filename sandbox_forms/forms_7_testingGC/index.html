@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .custom-span::before {
+      content: "Block!";
+      display: block;
+      background: yellow;
+    }
+
+    .custom-radio::before {
+      content: "Hidden!";
+      display: block;
+      background: red;
+    }
+
+    button::after {
+      content: "hello";
+
+    }
+  </style>
+</head>
+<body>
+
+  <!-- THIS IS FOR TESTING GENERATED CONTENT
+        ON SPAN VS INPUT
+        INPUT DOESNT BREAK ON NEW LINE -->
+  <span>Text <span class="custom-span"></span> more text</span>
+  <input type="radio" class="custom-radio" />
+
+  <button>Something</button>
+</body>
+</html>

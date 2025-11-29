@@ -1,0 +1,30 @@
+input[type="checkbox"] {
+  appearance: none;
+
+  position: relative;
+  width: 1em;
+  height: 1em;
+  border: 1px solid grey;
+  vertical-align: -2px;
+  color: green;
+}
+
+input[type="checkbox"]::before {
+  content: "\2714";
+  position: absolute;
+  font-size: 1.2em;
+  right: -1px;
+  top: -0.3em;
+  visibility: hidden;
+}
+
+input[type="checkbox"]:checked::before {
+  /* Use `visibility` instead of `display` to avoid recalculating layout */
+  visibility: visible;
+}
+
+input[type="checkbox"]:disabled {
+  border-color: black;
+  background-color: #ddd;
+  color: gray;
+}
