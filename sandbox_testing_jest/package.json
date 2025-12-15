@@ -1,0 +1,14 @@
+{
+  "name": "sandbox_testing_jest",
+  "version": "1.0.0",
+  "description": "Following Jest's tutorial page - getting started",
+  "license": "ISC",
+  "author": "Tuan Ha <hatuan@email.cz>",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
+}
