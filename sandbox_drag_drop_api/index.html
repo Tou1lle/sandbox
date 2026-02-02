@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag and Drop - sandbox</title>
+
+  <style>
+    div {
+      border: 1px solid black;
+    }
+    
+    div.drop-container {
+      width: 200px;
+      height: 200px;
+      background-color: yellow;
+    }
+
+    div.drag-element {
+      width: 100px;
+      height: 100px;
+      background-color: turquoise;
+    }
+  </style>
+</head>
+<body>
+  <div class="drop-container">
+
+  </div>
+  <div class="drag-element" id="ship" draggable="true">
+    drag me
+  </div>
+
+  <script>
+    const dragStartHandler = (e) => {
+      e.dataTransfer.setData("id", e.target.id)
+    }
+
+    const dragOverHandler = (e) => {
+      e.preventDefault();
+    }
+
+    const dropHandler = (e) => {
+      e.preventDefault();
+      const id = e.dataTransfer.getData("id");
+      e.target.appendChild(document.getElementById(id));
+    }
+
+    const dropContainer = document.querySelector(".drop-container");
+    const dragElement = document.querySelector(".drag-element");
+
+    dropContainer.addEventListener("drop", dropHandler);
+    dropContainer.addEventListener("dragover", dragOverHandler);
+    dragElement.addEventListener("dragstart", dragStartHandler);
+  </script>
+</body>
+</html>
