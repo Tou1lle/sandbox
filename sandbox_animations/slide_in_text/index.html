@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slide in text</title>
+
+    <style>
+      .slide-in {
+        animation-duration: 3s;
+        animation-name: slide-in;
+        animation-iteration-count: 3;
+        animation-direction: alternate;
+      }
+
+      p span {
+        display: inline-block;
+        animation-duration: 3s;
+        animation-name: grow-shrink;
+      }
+
+      @keyframes slide-in {
+        from {
+          translate: 150vw 0;
+          scale: 200% 1;
+        }
+
+        to {
+          translate: 0 0;
+          scale: 100% 1;
+        }
+      }
+
+      /*
+      @keyframes grow-shrink {
+        25%,
+        75% {
+          scale: 100%;
+        }
+
+        50% {
+          scale: 200%;
+          color: magenta;
+        }
+      }
+      */
+    </style>
+  </head>
+  <body>
+    <p id="watch-me">
+      The Caterpillar and <span>Alice</span> looked at each other for some time in silence:
+      at last the Caterpillar took the hookah out of its mouth, and addressed
+      her in a languid, sleepy voice.
+    </p>
+    <ul id="output"></ul>
+
+    <script>
+      const element = document.getElementById("watch-me");
+      element.addEventListener("animationstart", listener);
+      element.addEventListener("animationend", listener);
+      element.addEventListener("animationiteration", listener);
+
+      element.className = "slide-in";
+
+      function listener(e) {
+        const l = document.createElement("li");
+        switch (e.type) {
+          case "animationstart":
+            l.textContent = `Started: elapsed time is ${e.elapsedTime}`;
+            break;
+          case "animationend":
+            l.textContent = `Ended: elapsed time is ${e.elapsedTime}`;
+            break;
+          case "animationiteration":
+            l.textContent = `New loop started at time ${e.elapsedTime}`;
+            break;
+          }
+          document.getElementById("output").appendChild(l);
+      }
+    </script>
+  </body>
+</html>
