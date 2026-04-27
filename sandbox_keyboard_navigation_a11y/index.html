@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyboard navigation</title>
+</head>
+<body>
+  <div class="button-container">
+    <button class="rock button">Rock</button>
+    <button class="paper button">Paper</button>
+    <button class="scissors button">Scissors</button>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll(".button");
+
+    function nameAlerter(e) {
+      if (e.type === "click" || e.key === " " || e.key === "Enter") {
+        alert(e.target.textContent);
+      }
+    }
+
+    buttons.forEach(button => {
+      button.addEventListener("click", nameAlerter);
+      button.addEventListener("keydown", nameAlerter);
+    });
+  </script>
+</body>
+</html>
